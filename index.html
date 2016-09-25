@@ -7,7 +7,11 @@
 
 		<!-- CSS ========================================================================================================-->
 		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="Styles/bootswatch.readable.css">
+		<link rel="stylesheet" href="Styles/bootswatch.lumen.css">
+		<link rel="stylesheet" href="Styles/loader.css">
+		<link rel="stylesheet" href="Styles/loadingScreen.css">
+
+
 
 		<!-- Images ======================================================================================================-->
 		<!--These links are used for the images on the tab-->
@@ -32,7 +36,21 @@
 	</head>
 
 	<body>
-		<my-app>Loading...</my-app>
+		<!--The My App Tag is what is actually running anything inside is just the initial loading screen-->
+		<my-app>
+			
+			<!-- This Shows the Loading Screen while the application is loading -->
+			<div id="loadingScreen" height="100%" width="100%" align="center">
+				<div id="loadingScreenImage">
+					<img src="Images/Strictly_Shirts_logo.jpg" alt="Strictly Shirts" height="20%" width="50%">
+				</div>
+				<div id="loadingScreenAnimation"" class="spinner">
+					<div class="dot1"></div>
+					<div class="dot2"></div>
+				</div>
+			</div>
+
+		</my-app>
 	</body>
 
 </html>
