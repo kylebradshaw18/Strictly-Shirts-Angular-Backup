@@ -1,32 +1,47 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/clothes" routerLinkActive="active"> Strictly Shirts </a>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/clothes" routerLinkActive="active"> Strictly Shirts </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a routerLink="/clothes" routerLinkActive="active"> Home <span class="sr-only">(current)</span></a></li>
+          <li><a routerLink="/about" routerLinkActive="active"> About Us </a></li>
+          <!-- Experimental Dashboard Element -->
+          <li [hidden]="!check"><a routerLink="/dashboard" routerLinkActive="active"> Dashboard </a></li>
+          <li [hidden]="!check"><a routerLink="/heroes" routerLinkActive="active"> Heroes </a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          <!-- Social Media Images -->
+          <li>
+            <a href="https://www.facebook.com/strictlyShirtsMarist">
+              <img border="0" alt="Facebook" src="Images/facebook.png" height="23" width="23">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/">
+              <img border="0" alt="Instagram" src="Images/instagram.png" height="23" width="23">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/StrictlyShirts">
+              <img border="0" alt="Twitter" src="Images/Twitter.png" height="23" width="23">
+            </a>
+          </li>
+
+
+          <li class="nav navbar-nav navbar-right"><a routerLink="/login" routerLinkActive="active"> {{loginLabel}} </a></li>
+          <li class="nav navbar-nav navbar-right"><a routerLink="/cart" routerLinkActive="active"> Cart ({{CartItems}}) </a></li>
+        </ul>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a routerLink="/clothes" routerLinkActive="active"> Home <span class="sr-only">(current)</span></a></li>
-        <li><a routerLink="/about" routerLinkActive="active"> About Us </a></li>
-        <li *ngIf="check"><a routerLink="/dashboard" routerLinkActive="active"> Dashboard </a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="nav navbar-nav navbar-right"><a routerLink="/login" routerLinkActive="active"> Login / Sign Up </a></li>
-      </ul>
-    </div>
-  </div>
 </nav>
 
 
+  <!-- This is where the other components get loaded-->
+  <router-outlet></router-outlet>
 
-<h1>{{title}}</h1>
-    <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-    </nav>
-    <router-outlet></router-outlet>
-
-
-    
-
-
+  <!--Display Footer on bottom of every page -->
+  <foot></foot>
 

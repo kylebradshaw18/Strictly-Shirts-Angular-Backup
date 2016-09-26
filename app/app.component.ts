@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FooterComponent} from './Footer/footer.component';
 
 @Component({
   moduleId: module.id,
@@ -13,6 +14,7 @@ export class AppComponent {
   //If we do set this to their name
   //And when they click on their name it should bring them to there name
   //Else bring them to the login or create account screen
-  login = 'Login';
-  check = true;
+  loginLabel = 'Login / Sign Up';
+  check = false;
+  CartItems = 0;
 }

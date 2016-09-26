@@ -9,6 +9,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { LoginComponent } from './Login/login.component';
 import { ClothesComponent } from './Clothes/clothes.component';
 import { AboutComponent } from './About/about.component';
+import { CartComponent } from './Cart/cart.component';
 
 
 
@@ -42,9 +43,19 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'cart',
+    component: CartComponent
   }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);
 
-export const routedComponents = [DashboardComponent, HeroesComponent, HeroDetailComponent, LoginComponent, ClothesComponent, AboutComponent];
+export const routedComponents = [DashboardComponent, 
+                                 HeroesComponent, 
+                                 HeroDetailComponent, 
+                                 LoginComponent, 
+                                 ClothesComponent, 
+                                 AboutComponent, 
+                                 CartComponent];
